@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejerD</title>
+    <style>
+        body{
+            background-color: #0a9fe4;
+        }
+        #contenedor{
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color: #4bade2;
+        }
+    </style></head>
+<body>
+<div id="contenedor">
+    <h1 id="argumentos">Modificar el contenido con uno de cada</h1>
+
+    <label for="textoInicial"></label>
+    <input type="text" name="textoinicial" value="Texto inicial" id="textoInicial">
+    <br>
+    <p id="textoCambiado">texto a cambiar</p>
+    <br>
+    <button onclick="valor()">value</button>
+    <button onclick="InnerHtml()">innerHTML</button>
+    <button onclick="TextContent()">TextContent</button>
+    <script src="ejerD.js"></script>
+</div>
+</body>
+</html>

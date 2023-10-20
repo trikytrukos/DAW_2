@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+button{
+    margin: 10px;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#cuadrado,
+#cuadradoVacio,
+#trianguloDerecho,
+#trianguloIzquierdo,
+#triangulo,
+#trianguloVacio{
+    margin: auto;
+    padding: 5px;
+}
+
+

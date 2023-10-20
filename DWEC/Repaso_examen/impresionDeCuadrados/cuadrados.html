@@ -1,0 +1,32 @@
+<!DOCTYPE html> <html lang="es">
+<head>
+    <meta charset=“UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresión de Cuadrado</title>
+</head>
+<body>
+<h1>Impresion de Cuadrado</h1>
+<pre id="cuadrado"></pre>
+<script>
+    function imprimirCuadrado(tamano){
+        let cuadrado= "";
+        for (let i = 0; i < tamano; i++) {
+            for (let j = 0; j < tamano; j++) {
+                // Agregar asterisco en los bordes y espacio en blanco en el interior
+                if (i === 0 || i === tamano - 1 || j === 0 || j === tamano - 1) {
+                    cuadrado += "*";
+                } else {
+                    cuadrado += " ";
+                }
+            }
+            cuadrado += "\n";
+        }
+        return cuadrado;
+    }
+
+    const tamano = 8;
+    let cuadradoGenerado = imprimirCuadrado(tamano);
+    document.getElementById("cuadrado").innerHTML= cuadradoGenerado;
+</script>
+</body>
+</html>

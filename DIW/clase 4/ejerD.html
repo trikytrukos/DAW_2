@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejer4</title>
+    <style>
+        #contenedor{
+            padding: 5px;
+            border:2px solid black;
+            background-color: #1eaade;
+        }
+        .boton{
+            margin:10px;
+            border-radius: 5px;
+            background-color: #1eaade;
+        }
+    </style>
+    <script defer>
+        function eliminarParrafo(inputId){
+            let div= document.getElementById(inputId);
+            let parrafo=div.getElementsByTagName("p")[2];
+            div.removeChild(parrafo);
+        }
+    </script>
+</head>
+<body>
+<div id="contenedor">
+    <h2>Contenedor de parrafos</h2>
+    <p>parrafo1</p>
+    <p>parrafo2</p>
+    <p>parrafo3</p>
+    <p>parrafo4</p>
+    <p>parrafo5</p>
+    <p>parrafo6</p>
+</div>
+<button class="boton" onclick="eliminarParrafo('contenedor')">borrar 3</button>
+</body>
+</html>

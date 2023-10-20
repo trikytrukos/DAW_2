@@ -1,0 +1,40 @@
+#miEncabezado{
+    background-color: #FFCD23;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.tituloPrincipal{
+    color: #33C2FF;
+}
+.contenidoPrincipal{
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+li{
+    position: relative;
+    left: -30px;
+    list-style: circle;
+}
+.listaElementos{
+    background-color: lightpink;
+}
+.contenidoSecundario{
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+.botonAccion {
+    background-color: #F81553;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: grabbing;
+}
+
+#miPieDePagina{
+    background-color: #484848;
+    padding: 5px;
+    color: White;
+}

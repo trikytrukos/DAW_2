@@ -1,0 +1,69 @@
+<!DOCTYPE html> <html lang="es">
+<head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Días en un Mes</title>
+</head>
+<body>
+<h1>Ingresa un Mes</h1>
+<label for="mes">Mes:</label>
+<input type="text" id="mes">
+<br>
+<button onclick="calcularDias()">Calcular Días</button>
+<div id="resultado"></div>
+<script>
+    function calcularDias(){
+        let mes= parseInt(document.getElementById("mes").value);
+        if(mes<12 && mes>1){
+            let anio= new Date().getFullYear();
+            let ultimoDia = new Date(anio, mes, 0).getDate();
+            let nombre = nombreMes(mes);
+            document.getElementById("resultado").innerHTML= "mes:"+nombre+" numdias:"+ultimoDia;
+        }else{
+            document.getElementById("resultado").innerHTML= "mes erroneo";
+        }
+    }
+    function nombreMes(mes){
+        let nombre="";
+        switch (mes){
+            case 1:
+                nombre="enero";
+                break;
+            case 2:
+                nombre="febrero";
+                break;
+            case 3:
+                nombre="marzo";
+                break;
+            case 4:
+                nombre="abril";
+                break;
+            case 5:
+                nombre="mayo";
+                break;
+            case 6:
+                nombre="junio";
+                break;
+            case 7:
+                nombre="julio";
+                break;
+            case 8:
+                nombre="agosto";
+                break;
+            case 9:
+                nombre="septiembre";
+                break;
+            case 10:
+                nombre="octubre";
+                break;
+            case 11:
+                nombre="noviembre";
+                break;
+            case 12:
+                nombre="diciembre";
+                break;
+        }
+        return nombre;
+    }
+</script>
+</body>
+</html>

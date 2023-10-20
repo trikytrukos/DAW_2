@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica2-1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="practica2-1DOM.js"></script>
+</head>
+<body>
+<h1>Practica DOM Avanzada</h1>
+<div class="section" >
+    <h2>Sección 1</h2>
+    <button onclick="resaltar('lista1')">Resaltar Elementos</button>
+    <button onclick="ocultar('lista1')">Ocultar Elementos</button>
+    <button onclick="mostrarUno('lista1')">Mostrar Elementos</button>
+    <ul id="lista1">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+</div>
+<div class="section" >
+    <h2>Sección 2</h2>
+    <button onclick="resaltar('lista2')">Resaltar Elementos</button>
+    <button onclick="ocultar('lista2')">Ocultar Elementos</button>
+    <button onclick="mostrarUno('lista2')">Mostrar Elementos</button>
+    <ol id="lista2">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+</div>
+<div class="section" >
+    <h2>Sección 3</h2>
+    <button onclick="resaltar('lista3')">Resaltar Elementos</button>
+    <button onclick="ocultar('lista3')">Ocultar Elementos</button>
+    <button onclick="mostrarUno('lista3')">Mostrar Elementos</button>
+
+    <ul id="lista3">
+        <li>Elemento X</li>
+        <li>Elemento Y</li>
+        <li>Elemento Z</li>
+    </ul>
+</div>
+<button onclick="mostrar()">Mostrar Todos</button>
+</body>
+</html>

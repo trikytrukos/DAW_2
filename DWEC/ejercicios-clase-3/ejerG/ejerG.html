@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejerG</title>
+    <style>
+        body{
+            background-color: #0a9fe4;
+        }
+        #contenedor{
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color: #4bade2;
+        }
+        img{
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="contenedor">
+    <a id="miEnlace" href="https://www.ejemplo.com">Enlace de ejemplo</a>
+    <button onclick="cambiarHref()">Cambiar Enlace</button>
+</div>
+
+<script>
+    function cambiarHref() {
+        var enlace = document.getElementById("miEnlace");
+        enlace.href = "https://www.nuevopagina.com"; // Cambia esta URL a la que desees
+    }
+
+</script>
+</body>
+</html>

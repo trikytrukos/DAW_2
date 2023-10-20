@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ejer2</title>
+    <style>
+        #error-msg {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="formulario">
+    <form onsubmit="return validarFormulario()">
+        Nombre: <label><input type="text" id="nombre"></label>
+        <br><br>
+        Correo Electrónico: <label><input type="text" id="correo"></label>
+        <div id="error-msg" ></div>
+        <br><br>
+        <button type="submit" id="registrar">Registrarse</button>
+    </form>
+</div>
+<script>
+    function validarFormulario() {
+        var nombreInput = document.getElementById("nombre");
+        var correoInput = document.getElementById("correo");
+        var nombre = nombreInput.value;
+        var correo = correoInput.value;
+        var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        var errorMensaje = document.getElementById("error-msg");
+
+        if (nombre.trim() === "") {
+            errorMensaje.textContent = "El campo de nombre no puede estar vacío";
+            return false;
+        }
+
+        if (correo.trim() === "") {
+            errorMensaje.textContent = "El campo de correo no puede estar vacío";
+            correoInput.classList.add("invalid-input");
+            return false;
+        }
+
+        if (regex.test(correo)) {
+            errorMensaje.textContent = "";
+            correoInput.classList.remove("invalid-input");
+            alert("El registro ha sido realizado con éxito");
+        } else {
+            errorMensaje.textContent = "Dirección de correo electrónico no válida";
+            correoInput.classList.add("invalid-input");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</body>
+</html>

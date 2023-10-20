@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #contenedor{
+            padding: 5px;
+            border:2px solid black;
+            background-color: #1eaade;
+        }
+        .boton{
+            margin:10px;
+            border-radius: 5px;
+            background-color: #1eaade;
+        }
+    </style>
+    <script defer>
+        const contenedor = document.getElementById("contenedor");
+        function modificarContenedor() {
+            console.log("Usando childNodes:");
+            for (let i = 0; i < contenedor.childNodes.length; i++) {
+                console.log(contenedor.childNodes[i]);
+            }
+
+            console.log("\nUsando children:");
+            for (let i = 0; i < contenedor.children.length; i++) {
+                console.log(contenedor.children[i]);
+            }
+
+            contenedor.childNodes[1].textContent = "Este párrafo fue modificado con childNodes.";
+            contenedor.children[2].textContent = "Este párrafo fue modificado con children.";
+        }
+    </script>
+</head>
+<body>
+<div id="contenedor">
+    <p>Este es el primer párrafo.</p>
+    <p>Este es el segundo párrafo.</p>
+    <span>Este es el primer span.</span>
+    <span>Este es el segundo span.</span>
+</div>
+<button class="boton" onclick="modificarContenedor()">Modificar Contenedor</button>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+#circulo{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 15px solid;
+    border-color: #308b53;
+    background-color: #3dd176 ;
+}
+
+#texto-circulo{
+    font-size: 30px;
+}

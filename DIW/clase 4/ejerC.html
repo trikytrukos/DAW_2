@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejer3</title>
+    <style>
+        #contenedor{
+            padding: 5px;
+            border:2px solid black;
+            background-color: #1eaade;
+        }
+        .boton{
+            margin:10px;
+            border-radius: 5px;
+            background-color: #1eaade;
+        }
+    </style>
+    <script defer>
+        function meterTexto(inputId){
+            let div= document.getElementById(inputId);
+            let nuevoP= document.createElement("p");
+            nuevoP.textContent="soy un parrafo nuevo";
+            div.appendChild(nuevoP);
+        }
+    </script>
+</head>
+<body>
+<div id="contenedor">
+    <h1>Este es el div donde irá el parrafo</h1>
+</div>
+<button class="boton"  onclick="meterTexto('contenedor')">botón</button>
+</body>
+</html>

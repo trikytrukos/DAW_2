@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron&display=swap">
+    </head>
+<body>
+<div id="container">
+    <div id="calculadora">
+            <div id="pantalla">
+                    <input type="text" id="argumentos" readonly>
+            </div>
+        <br>
+        <button onclick="borrarPantalla()">C</button>
+        <button id="raiz" onclick="calcularRaizCuadrada()">√</button>
+        <button id="delete" onclick="borrarCaracter()">←</button>
+        <br>
+        <button onclick="mostrarEnPantalla('7')">7</button>
+        <button onclick="mostrarEnPantalla('8')">8</button>
+        <button onclick="mostrarEnPantalla('9')">9</button>
+        <button class="button-operator" onclick="mostrarOperador('+')">+</button>
+        <br>
+        <button onclick="mostrarEnPantalla('4')">4</button>
+        <button onclick="mostrarEnPantalla('5')">5</button>
+        <button onclick="mostrarEnPantalla('6')">6</button>
+        <button class="button-operator" onclick="mostrarOperador('-')">-</button>
+        <br>
+        <button onclick="mostrarEnPantalla('1')">1</button>
+        <button onclick="mostrarEnPantalla('2')">2</button>
+        <button onclick="mostrarEnPantalla('3')">3</button>
+        <button class="button-operator" onclick="mostrarOperador('*')">*</button>
+        <br>
+        <button onclick="mostrarEnPantalla('0')">0</button>
+        <button onclick="mostrarOperador('.')">.</button>
+        <button class="button-operator" onclick="mostrarOperador('/')">/</button>
+        <button class="button-operator" onclick="calcularResultado()">=</button>
+    </div>
+</div>
+<script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejer1</title>
+</head>
+<body>
+<div id="miDiv">
+    <p> div loco</p>
+</div>
+<button onclick="cambiarDiv('miDiv')">cambiar div</button>
+<script>
+    function cambiarDiv(inputID){
+        let nuevoId="nuevoId";
+        let miDiv = document.getElementById(inputID)
+        miDiv.setAttribute("id",nuevoId);
+    }
+</script>
+</body>
+</html>

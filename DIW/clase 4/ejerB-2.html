@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #contenedor{
+            padding: 5px;
+            border:2px solid black;
+            background-color: #1eaade;
+        }
+        .boton{
+            margin:10px;
+            border-radius: 5px;
+            background-color: #1eaade;
+        }
+        .highlight{
+            background-color: #fff;
+        }
+    </style>
+    <script defer>
+        function resaltarParrs() {
+            const contenedor = document.getElementById("contenedor");
+            const parrafos = contenedor.getElementsByTagName("p");
+
+            if (parrafos.length >= 2) {
+
+                const parrafosResaltados = contenedor.getElementsByClassName("highlight");
+                while (parrafosResaltados.length > 0) {
+                    parrafosResaltados[0].classList.remove("highlight");
+                }
+
+                parrafos[0].classList.add("highlight");
+                parrafos[parrafos.length - 1].classList.add("highlight");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="contenedor">
+    <p>Este es el primer párrafo.</p>
+    <span>Este es el primer span.</span>
+    <p>Este es el segundo párrafo.</p>
+    <span>Este es el segundo span.</span>
+</div>
+<button class="boton" onclick="resaltarParrs()">Modificar Contenedor</button>
+</body>
+</html>

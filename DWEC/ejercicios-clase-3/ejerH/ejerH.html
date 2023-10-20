@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejerH</title>
+    <style>
+        body{
+            background-color: #0a9fe4;
+        }
+        #contenedor{
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color: #4bade2;
+        }
+        img{
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="contenedor">
+    <label for="miCheckbox"></label>
+    <input type="checkbox" id="miCheckbox">
+
+    <button onclick="cambiarEstadoCheckbox()">Cambiar Estado</button>
+    <p>El estado del checkbox es: <span id="estadoCheckbox">No marcado</span></p>
+</div>
+
+<script>
+    // Función para cambiar el estado "checked" del checkbox
+    function cambiarEstadoCheckbox() {
+        let checkbox = document.getElementById("miCheckbox");
+        let estadoSpan = document.getElementById("estadoCheckbox");
+
+        if (checkbox.checked) {
+            checkbox.checked = false;
+            estadoSpan.textContent = "No marcado";
+        } else {
+            checkbox.checked = true;
+            estadoSpan.textContent = "Marcado";
+        }
+    }
+</script>
+</body>
+</html>
