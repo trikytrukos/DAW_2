@@ -9,11 +9,14 @@
 </head>
 <body>
 <header></header>
-<form action="cadenas-01-php.php" method="get">
+<form  method="get">
     <label for="texto">Introduce una cadena de texto:</label>
     <input type="text" id="texto" name="texto" required>
     <br>
     <input type="submit" value="Enviar">
+<?php
+include 'cadenas-01-php.php'
+    ?>
 </form>
 </body>
 </html>
