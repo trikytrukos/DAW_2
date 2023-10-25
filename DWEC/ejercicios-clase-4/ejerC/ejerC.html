@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resaltar Elementos</title>
+  <style>
+      .resaltado {
+          background-color: yellow;
+      }
+  </style>
+</head>
+<body>
+<div id="contenedor">
+  <p>Este es el primer párrafo</p>
+  <span>Este es el primer span</span>
+  <p>Este es el segundo párrafo</p>
+  <span>Este es el segundo span</span>
+</div>
+<button id="resaltarSiguientes">Resaltar Siguientes</button>
+<button id="resaltarAnteriores">Resaltar Anteriores</button>
+
+<script>
+    document.getElementById("resaltarSiguientes").addEventListener("click", function() {
+        var elementos = document.getElementById("contenedor").children;
+        var resaltar = false;
+
+        for (var i = 0; i < elementos.length; i++) {
+            if (resaltar) {
+                if (elementos[i].tagName == "SPAN") {
+                    elementos[i].classList.add("resaltado");
+                    break;
+                }
+            }
+            if (elementos[i] === document.activeElement) {
+                resaltar = true;
+            }
+        }
+    });
+
+    document.getElementById("resaltarAnteriores").addEventListener("click", function() {
+        var elementos = document.getElementById("contenedor").children;
+        var resaltar = false;
+
+        for (var i = elementos.length - 1; i >= 0; i--) {
+            if (resaltar) {
+                if (elementos[i].tagName == "SPAN") {
+                    elementos[i].classList.add("resaltado");
+                    break;
+                }
+            }
+            if (elementos[i] === document.activeElement) {
+                resaltar = true;
+            }
+        }
+    });
+</script>
+</body>
+</html>
