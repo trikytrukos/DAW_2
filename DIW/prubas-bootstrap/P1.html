@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>calendario</title>
+  <link href="/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/bootstrap-5.2.3-dist/css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="/bootstrap-5.2.3-dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+  <link href="/bootstrap-5.2.3-dist/css/bootstrap-utilities.min.css" rel="stylesheet">
+  <style>
+    .dropdown-menu{
+        width: 1000px;
+    }
+    .calendar-container button{
+        width: 40px;
+        height: 40px;
+    }
+  </style>
+</head>
+<body>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle"
+          data-bs-toggle="dropdown" data-bs-auto-close="outside">select</button>
+  <div class="dropdown-menu p-4 fw-bold">
+    <h4 class="text-center">Flight dates</h4>
+    <!-- primer row-->
+    <div class="row py-3">
+      <!--columna 1-->
+      <div class="col d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary d-flex">prev</button>
+        <span>septiembre 2023</span>
+      </div>
+      <!--columna 2-->
+      <div class="col d-flex justify-content-end align-items-center gap-2">
+        <span>octubre 2023</span>
+        <button class="btn btn-outline-secondary d-flex">next</button>
+      </div>
+    </div>
+
+    <!--segundo row-->
+    <div class="row"></div>
+
+    <!--tercer row-->
+    <div class="row calendar-container">
+      <div class="col border-end">
+        <div class="calendar-grid">
+          <div class="row">
+            <div class="col">Mon</div>
+            <div class="col">Tu</div>
+            <div class="col">Wed</div>
+            <div class="col">Thu</div>
+            <div class="col">Fri</div>
+            <div class="col">Sat</div>
+            <div class="col">Sun</div>
+          </div>
+          <!-- row date -->
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">30</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">1</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">2</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">3</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">4</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">5</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">6</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">7</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">8</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">9</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">10</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">11</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">12</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">13</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">14</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">15</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">16</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">17</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">18</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">19</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">20</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">21</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">22</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">23</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">24</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">25</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">26</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">27</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">28</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">29</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">30</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">11</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">2</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">3</span></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">4</span></button>
+            </div>
+          </div>
+        </div>
+      </div><div class="col">
+      <div class="calendar-grid">
+        <div class="row">
+          <div class="col">Mon</div>
+          <div class="col">Tu</div>
+          <div class="col">Wed</div>
+          <div class="col">Thu</div>
+          <div class="col">Fri</div>
+          <div class="col">Sat</div>
+          <div class="col">Sun</div>
+        </div>
+        <!-- row date -->
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">30</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">1</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">2</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">3</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">4</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">5</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">6</span></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">7</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">8</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">9</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">10</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">11</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">12</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">13</span></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">14</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">15</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">16</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">17</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">18</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">19</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">20</span></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">21</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">22</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">23</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">24</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">25</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">26</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">27</span></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">28</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">29</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">30</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">11</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">2</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">3</span></button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-light rounded-circle"><span class="text-secondary">4</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+    <div class="row py-y">
+      <div class="col d-flex justify-content-between gap-2">
+        <button class="btn btn-outline-secondary">cancel</button>
+        <button class="btn btn-primary">save</button>
+      </div>
+    </div>
+    </div>
+
+
+</div>
+
+
+<script src="/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+<script src="/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="/bootstrap-5.2.3-dist/js/bootstrap.esm.min.js"></script>
+</body>
+</html>

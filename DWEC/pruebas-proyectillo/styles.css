@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 480px;
+    height: 480px;
+    background-color: #000;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Añade una sutil sombra */
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Fondo transparente para ver la textura */
+    border: 2px solid #00FF00; /* Bordes verdes neon */
+    cursor: pointer;
+    transform: translateY(0);
+    transition: transform 0.2s;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Sombra brillante en las celdas */
+}
+
+.cell.red {
+    background-color: #FF0000; /* Rojo neon para fichas rojas */
+}
+
+.cell.yellow {
+    background-color: #FFFF00; /* Amarillo neon para fichas amarillas */
+}
+
+#reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00FF00; /* Botón en verde neon */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#reset:hover {
+    background-color: #00AA00; /* Cambio de color al pasar el ratón */
+}
