@@ -2,11 +2,6 @@
 if (isset($_GET['texto'])) {
     $texto = $_GET['texto'];
 
-    if (isset($_GET['reset']) && $_GET['reset'] === 'true') {
-        // Si el parámetro "reset" es igual a "true", reseteamos la variable $texto
-        $texto = "";
-    }
-
     $vocales = "";
     $consonantes = "";
 
