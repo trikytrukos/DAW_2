@@ -67,4 +67,7 @@ function revertirCadena($cadena){
   return $cadenaInversa;
 }
 echo revertirCadena("hola Mundo!  Pula Mea Frate");
+
+
+
 ?>
