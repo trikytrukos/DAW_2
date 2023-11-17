@@ -1,0 +1,78 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.caja1 {
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.caja1:hover {
+    width: 150px;
+}
+
+.caja2 {
+    background-color: #e74c3c;
+    transition: width 0.3s ease, height 0.6s ease;
+}
+
+.caja2:hover {
+    width: 130px;
+    height: 120px;
+}
+
+.caja3 {
+    background-color: #27ae60; /* Verde */
+    transition: width 0.3s ease-in, height 0.6s ease;
+}
+
+.caja3:hover {
+    width: 130px;
+    height: 120px;
+}
+
+.caja4 {
+    background-color: #f1c40f;
+    transition-property: width, height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.2s;
+}
+
+.caja4:hover {
+    width: 130px;
+    height: 120px;
+}
+
+.caja5 {
+    background-color: #8e44ad;
+}
+
+.caja5:hover {
+    transform: scale(1.2) rotate(30deg);
+}

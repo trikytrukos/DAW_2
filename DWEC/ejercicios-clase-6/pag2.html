@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de Usuario</title>
+  <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f0f8ff; /* Azul claro */
+          padding: 20px;
+          text-align: center;
+      }
+
+      h1 {
+          color: #ff4500; /* Naranja */
+          font-size: 2.5em;
+      }
+
+      p {
+          background: white;
+          display: inline-block;
+          padding: 15px;
+          border: 2px solid #32cd32; /* Verde */
+          border-radius: 5px;
+          margin: 10px 0;
+          font-size: 1.2em;
+      }
+
+      strong {
+          color: #ff4500; /* Naranja */
+      }
+  </style>
+</head>
+<body>
+<h1>Tarjeta de Usuario</h1>
+
+<p><strong>Nombre:</strong> <span id="nombre"></span></p>
+<p><strong>Apellido:</strong> <span id="apellido"></span></p>
+<p><strong>Ciclo Formativo:</strong> <span id="Ciclo-Formativo"></span></p>
+<p><strong>Curso:</strong> <span id="curso"></span></p>
+
+<script>
+    var params = new URLSearchParams(window.location.search);
+    document.getElementById('nombre').innerText = params.get('nombre');
+    document.getElementById('apellido').innerText = params.get('apellido');
+    document.getElementById('Ciclo-Formativo').innerText = params.get('Ciclo-Formativo');
+    document.getElementById('curso').innerText = params.get('curso');
+</script>
+</body>
+</html>
