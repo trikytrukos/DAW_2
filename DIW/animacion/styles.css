@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+#edificio {
+    width: 100px;
+    height: 300px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+}
+
+#stickman {
+    width: 10px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    bottom: 300px;
+    animation: kick 2s infinite;
+}
+
+#balon {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 300px;
+    animation: moveBall 2s infinite;
+}
+
+@keyframes kick {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes moveBall {
+
+    25% {
+        transform: translate(50px, -50px);
+    }
+
+    75% {
+        transform: translate(100px, 0);
+    }
+    100% {
+        transform: translate(200px, 300px);
+    }
+}

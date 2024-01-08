@@ -67,7 +67,39 @@ function revertirCadena($cadena){
   return $cadenaInversa;
 }
 echo revertirCadena("hola Mundo!  Pula Mea Frate");
+echo '<br>';
 
+
+function sumaArray($acumulador, $arrayDeEnteros) {
+
+  foreach ($arrayDeEnteros as $entero) {
+    $acumulador += $entero;
+  }
+
+  return $acumulador;
+}
+
+$acumulador = 0;
+$arrayDeEnteros = [1, 2, 3, 4, 5];
+$acumulador = sumaArray($acumulador, $arrayDeEnteros);
+
+echo '<pre>';
+print_r($arrayDeEnteros);
+echo '</pre>';
+
+echo '<br>'."El nuevo valor del acumulador es: $acumulador";
+
+function sumaArrayVariable($acumulador, ...$arrayDeEnteros) {
+
+  foreach ($arrayDeEnteros as $entero) {
+    $acumulador += $entero;
+  }
+
+  return $acumulador;
+}
+
+$acumulador = 0;
+echo '<br>'."El nuevo valor del acumulador es: ".sumaArrayVariable($acumulador, 1,3,6,2,7,3);
 
 
 ?>

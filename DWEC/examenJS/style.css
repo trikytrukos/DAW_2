@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    min-width: 100%;
+}
+
+div{
+    align-items: center;
+    justify-content: center;
+    border: solid 2px black;
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.rojo{
+    background-color: red;
+}
+.naranja{
+    background-color: orange;
+}
+
+.verde{
+    background-color: green;
+}
+
+.lightgreen{
+    background-color: lightgreen;
+}
+.azul{
+    background-color: blue;
+}
+
+.lightblue{
+    background-color: lightskyblue;
+}
+
+.amarillo{
+    background-color: yellow;
+}
+
+.white{
+    background-color: white;
+}

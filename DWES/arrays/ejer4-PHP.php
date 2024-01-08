@@ -6,9 +6,11 @@ $carrito = [
   ["producto" => "Pantalones", "precio" => 29.99, "cantidad" => 3],
 ];
 
-$precios = array_map(function ($precios) {
-  return $precios["precio"];
-}, $carrito);
+function pula($carro) {
+  return $carro["precio"]*$carro["cantidad"];
+}
+
+$precios = array_map("pula", $carrito);
 
 $total = array_sum($precios);
 
