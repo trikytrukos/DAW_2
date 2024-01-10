@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>lista tareas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Lista de Tareas</h1>
+<div id="task-container">
+  <ul id="task-list">
+  <li onclick="toggleTask(this)">Tarea 1</li>
+  <li onclick="toggleTask(this)">Tarea 2</li>
+  <li onclick="toggleTask(this)">Tarea 3</li>
+</ul></div>
+
+<label for="new-task"></label>
+<input type="text" id="new-task" placeholder="Nueva Tarea">
+<button onclick="addTask()">Agregar Tarea</button>
+<button onclick="removeTask()">Eliminar Tarea</button>
+<button onclick="moveTaskUp()">Mover Tarea Arriba</button>
+</body>
+<script src="main.js"></script>
+</html>
