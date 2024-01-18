@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Laberinto</title>
-    <link  rel="stylesheet" type="text/css" href="styles.css">
+    <title>Apertura de Caja CS-Style</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="juego">
 
-<!--<button id="btnEmpezar" class="btn-empezar">Empezar a jugar</button>-->
-
-
-<div id="laberinto"></div>
-
-<div id="modalVictoria" class="modal-oculto">
-    <div class="contenido-modal">
-        <h2>¡Felicidades! Has ganado.</h2>
-        <button onclick="cerrarModal()">Cerrar</button>
+    <div id="caja">
+        <div class="cara frontal"></div>
+        <div class="cara superior"></div>
+        <div class="cara lateral"></div>
     </div>
-</div>
 
+    <div id="expositor">
+
+    </div>
+
+    <div id="nuevoExpositor">
+        <!-- Contenido del nuevo expositor -->
+    </div>
+
+    <button id="botonAbrir">Abrir Caja</button>
+</div>
 <script src="main.js"></script>
 </body>
 </html>
