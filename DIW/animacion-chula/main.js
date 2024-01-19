@@ -1,66 +1,94 @@
 document.addEventListener('DOMContentLoaded', function() {
     var caja = document.getElementById('caja');
     var nuevoExpositor = document.getElementById('nuevoExpositor');
-    var juego = document.getElementById('juego');
     
     const skins = {
-        comun: ['skin1.jpg', 'skin2.jpg'],
-        rara: ['skinRara1.jpg', 'skinRara2.jpg'],
-        epica: ['skinEpica1.jpg'],
-        legendaria: ['skinLegendaria1.jpg']
+        azul: ['imagenes/azules/Captura.PNG', 'imagenes/azules/MAC10.PNG', 'imagenes/azules/MAG7.PNG', 'imagenes/azules/mp5.PNG', 'imagenes/azules/p2000.PNG', 'imagenes/azules/recortada.PNG', 'imagenes/azules/scar.PNG'],
+        morado: ['imagenes/morados/g3sg.PNG', 'imagenes/morados/m4a1.PNG', 'imagenes/morados/ppbizon.PNG', 'imagenes/morados/usp.PNG', 'imagenes/morados/xm1014.PNG'],
+        rosa: ['imagenes/rosas/beretas.PNG', 'imagenes/rosas/famas.PNG', 'imagenes/rosas/mp7.PNG'],
+        roja: ['imagenes/rojas/ak.PNG', 'imagenes/rojas/mp9.PNG'],
+        dorado: ['imagenes/dorado.PNG']
     };
     
     document.getElementById('botonAbrir').addEventListener('click', function() {
         document.getElementById('expositor').classList.add('ocultar');
         document.getElementById('botonAbrir').classList.add('ocultar');
         
-        caja.classList.add('cajaCentrada');
+        caja.classList.add('rotarCaja');
         
-        caja.addEventListener('animationend', function() {
-            mostrarNuevoExpositorYOscurecerFondo();
+        caja.addEventListener('animationend', function handler() {
+            mostrarNuevoExpositor();
+            
+            caja.style.transform = 'rotateX(-5deg) rotateY(75deg) rotateZ(0)';
+            caja.removeEventListener('animationend', handler);
         });
         
         setTimeout(() => {
             iniciarAnimacionRuleta();
-        }, 1000); // Ajusta este tiempo según sea necesario
+        }, 1000);
     });
+    
+    
+    
+    function agregarImagenesAlExpositor() {
+        let expositor = document.getElementById('expositor');
+        let todasLasSkins = Object.values(skins).flat();
+        todasLasSkins.forEach(src => {
+            let img = document.createElement('img');
+            img.src = src;
+            img.classList.add('expositorImagen');
+            expositor.appendChild(img);
+        });
+    }
+    
+    agregarImagenesAlExpositor();
     
     function seleccionarSkinAleatoria() {
         let rand = Math.random() * 100;
-        if (rand < 70) return seleccionarAleatoria(skins.comun);
-        else if (rand < 90) return seleccionarAleatoria(skins.rara);
-        else if (rand < 99) return seleccionarAleatoria(skins.epica);
-        else return seleccionarAleatoria(skins.legendaria);
+        if (rand < 70) return seleccionarAleatoria(skins.azul);
+        else if (rand < 40) return seleccionarAleatoria(skins.morado);
+        else if (rand < 15) return seleccionarAleatoria(skins.rosa);
+        else if (rand < 2) return seleccionarAleatoria(skins.roja);
+        else if (rand < 1) return seleccionarAleatoria(skins.dorado);
     }
 
     function seleccionarAleatoria(arr) {
         return arr[Math.floor(Math.random() * arr.length)];
     }
-
+    
     function generarListaImagenes() {
         let listaImagenes = [];
-        for (let i = 0; i < 20; i++) { // Ajustar según la longitud deseada
-            listaImagenes.push(seleccionarSkinAleatoria());
+        for (let j = 0; j < 5; j++) {
+            for (let i = 0; i < 20; i++) {
+                listaImagenes.push(seleccionarSkinAleatoria());
+            }
         }
         return listaImagenes;
     }
     
     function iniciarAnimacionRuleta() {
-        let imagenes = generarListaImagenes(); // Asegúrate de tener esta función definida
-        // Agrega las imágenes al contenedor en nuevoExpositor y aplica la clase para animar
+        let imagenes = generarListaImagenes();
+        let contenedorImagenes = document.createElement('div');
+        contenedorImagenes.classList.add('contenedorImagenes');
+        
+        imagenes.forEach(src => {
+            let img = document.createElement('img');
+            img.src = src;
+            img.classList.add('imagenAnimada');
+            contenedorImagenes.appendChild(img);
+        });
+        
+        nuevoExpositor.style.display = 'flex';
+        nuevoExpositor.appendChild(contenedorImagenes);
+        
     }
     
-    function mostrarNuevoExpositorYOscurecerFondo() {
+    function mostrarNuevoExpositor() {
         var nuevoExpositor = document.getElementById('nuevoExpositor');
         
-        nuevoExpositor.style.display = 'flex'; // Mostrar el nuevo expositor
+        nuevoExpositor.style.display = 'flex';
     }
     
-    caja.addEventListener('animationend', function handler() {
-        caja.style.transform = 'rotateX(-5deg) rotateY(75deg) rotateZ(0)';
-        caja.removeEventListener('animationend', handler); // Remueve el listener
-        console.log("Animación terminada");
-    });
+    
     
 });
-

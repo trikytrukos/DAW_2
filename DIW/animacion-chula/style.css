@@ -21,7 +21,7 @@ body{
 #caja {
     width: 200px;
     height: 200px;
-    position: relative; /* Posición inicial, no centrada */
+    position: relative;
     margin: 0 auto;
     transform-style: preserve-3d;
     transform: rotateX(-20deg) rotateY(60deg) rotateZ(0);
@@ -34,7 +34,7 @@ body{
     border-radius: 10px;
 }
 
-/* Cara frontal */
+
 .cara.frontal {
     width: 100%;
     height: 100%;
@@ -43,7 +43,7 @@ body{
     transform: translateZ(100px);
 }
 
-/* Cara superior */
+
 .cara.superior {
     width: 100%;
     height: 350px;
@@ -52,7 +52,7 @@ body{
     transform: rotateX(90deg) translateY(-71px) translateZ(173px);
 }
 
-/* Cara lateral */
+
 .cara.lateral {
     width: 350px;
     height: 100%;
@@ -66,24 +66,45 @@ body{
     width: 90%;
     height: 300px;
     margin: 100px auto 20px;
-    background-color: #f38484;
+    background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 
+.expositorImagen {
+    width: 150px;
+    height: auto;
+    margin: 5px;
 }
 
 #nuevoExpositor {
     width: 90%;
     height: 300px;
     margin: 100px auto 20px;
-    background-color: #f38484;
+    background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: none;
+    position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#indicador {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 10;
 }
 
 #botonAbrir {
@@ -109,48 +130,32 @@ body{
 
 @keyframes rotarCaja {
     0% {
-        /* Estado inicial: rotación actual */
+
         transform: rotateX(-20deg) rotateY(60deg) rotateZ(0);
     }
     100% {
-        /* Estado final: nueva rotación */
+
         transform: rotateX(-5deg) rotateY(75deg) rotateZ(0);
     }
 }
 
-.cajaCentrada {
-    /* Aplicar la animación de movimiento primero, y luego la rotación */
+.rotarCaja {
     animation: rotarCaja 2s ;
 }
 
-/* Agregar al final de tu archivo CSS */
-@keyframes zoomYRotacion {
-    from {
-        transform: rotateX(-30deg) rotateY(-30deg) scale(1);
-    }
-    to {
-        transform: rotateX(0deg) rotateY(0deg) scale(1.5);
-    }
-}
-
-/* Aplicar esta animación a la caja cuando se presione el botón */
-.cajaAnimada {
-    animation: zoomYRotacion 2s forwards;
-}
-
-
 @keyframes desplazamientoImagenes {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); } /* Ajusta según la cantidad de imágenes */
+    100% { transform: translateX(-3000%); }
 }
 
 .contenedorImagenes {
-    /* Estilos para el contenedor de las imágenes */
     display: flex;
+    width: max-content;
     overflow: hidden;
 }
 
 .imagenAnimada {
-    /* Aplica esta clase a las imágenes dentro del contenedor */
-    animation: desplazamientoImagenes 10s linear; /* Ajusta la duración según sea necesario */
+    width: 250px;
+    height: auto;
+    animation: desplazamientoImagenes 10s linear forwards;
 }
