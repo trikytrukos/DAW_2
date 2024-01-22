@@ -1,0 +1,11 @@
+{
+  "name": "sass-pruebas",
+  "version": "0.0.1",
+  "description": "pruebas",
+  "main": "index.js",
+  "scripts": {
+    "Sass":"sass --watch ./utils/scss/styles.scss:./utils/css/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
