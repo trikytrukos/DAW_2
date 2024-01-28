@@ -1,0 +1,20 @@
+.#{$brand}-title-primary{
+  font-size: $font-size;
+  color: $primary;
+}
+
+.#{$brand}-title-secondary{
+  font-size: $font-size;
+  color: $secondary;
+}
+
+.#{$brand}-title-dark{
+  font-size: $font-size;
+  color: $dark-opacity;
+
+  font:{
+    size: $font-size;
+    weight: bold;
+    family: 'Arial', sans-serif;
+  }
+}

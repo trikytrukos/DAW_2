@@ -1,22 +1,2 @@
-$primary: blue;
-$secondary: red;
-$dark: #000;
-$dark-opacity: rgba($dark, 0.4);
-$font-size: 1rem;
-$brand: 'dsc';
-
-
-.#{$brand}-title-primary{
-  font-size: $font-size;
-  color: $primary;
-}
-
-.#{$brand}-title-secondary{
-  font-size: $font-size;
-  color: $secondary;
-}
-
-.#{$brand}-title-dark{
-  font-size: $font-size;
-  color: $dark-opacity;
-}
+@import "variables";
+@import "titles", "cards", "buttons";

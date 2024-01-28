@@ -8,6 +8,78 @@
 
 .dsc-title-dark {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.4); }
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; }
+
+.dsc-card {
+  width: 250px;
+  padding: 0;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: red; }
+  .dsc-card img {
+    width: 100%;
+    height: 150px;
+    display: block; }
+  .dsc-card_body {
+    height: 50px;
+    text-align: center;
+    background: blue;
+    line-height: 50px; }
+  .dsc-card h1 {
+    height: 50px;
+    line-height: 50px;
+    margin: 0; }
+
+.dsc-btn-primary, .dsc-btn-success, .dsc-btn-danger {
+  height: 40px;
+  min-width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  margin: 5px 0;
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2); }
+  .dsc-btn-primary:hover, .dsc-btn-success:hover, .dsc-btn-danger:hover {
+    cursor: pointer; }
+
+.dsc-btn-primary {
+  background: blue; }
+.dsc-btn-success {
+  background: #28c028; }
+.dsc-btn-danger {
+  background: #e72f38; }
+
+.btn-outline {
+  height: 40px;
+  min-width: 100px;
+  background: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px 0;
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+  .btn-outline-primary {
+    border: 1px solid blue;
+    color: rgba(0, 0, 255, 0.5); }
+    .btn-outline-primary:hover {
+      background: #0000cc;
+      color: #fff; }
+  .btn-outline-success {
+    border: 1px solid #28c028;
+    color: rgba(40, 192, 40, 0.5); }
+    .btn-outline-success:hover {
+      background: #1f961f;
+      color: #fff; }
+  .btn-outline-danger {
+    border: 1px solid #e72f38;
+    color: rgba(231, 47, 56, 0.5); }
+    .btn-outline-danger:hover {
+      background: #cc1720;
+      color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */
