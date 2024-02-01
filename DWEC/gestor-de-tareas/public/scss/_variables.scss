@@ -1,0 +1,36 @@
+$colors: (
+  "primary": #0f3460,
+  // Azul oscuro
+  "secondary": #16213e,
+  // Azul más intenso
+  "accent": #e94560,
+  // Rosa neón
+  "highlight": #1cb5e0,
+  // Azul cian neón
+  "text": #e8e8e8,
+  // Texto claro
+  "task-not-started": #fdfd96,
+  "task-in-progress": #ffaec9,
+  "task-completed": #cbf0f8,
+);
+
+$themes: (
+  "light": (
+    "background": #ecf0f1,
+    "text": #2c3e50,
+  ),
+  "dark": (
+    "background": #2c3e50,
+    "text": #ecf0f1,
+  ),
+);
+
+//fuentes
+$font-small: 0.8rem;
+$font-normal: 1rem;
+$font-large: 1.2rem;
+
+//margenes
+$margin-small: 5px;
+$margin-normal: 10px;
+$margin-large: 15px;

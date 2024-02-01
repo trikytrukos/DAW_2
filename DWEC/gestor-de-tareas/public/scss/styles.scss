@@ -1,0 +1,187 @@
+@import "variables";
+@import "mixins";
+@import "functions";
+
+// Estilos generales
+body {
+  background-color: theme-color("light", "background");
+  color: theme-color("light", "text");
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: color("accent");
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  min-height: 80vh;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.modal {
+  display: none; // Oculto por defecto
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(map-get($colors, "text"), 0.4);
+
+  .modal-content {
+    background-color: color("secondary");
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid color("accent");
+    width: 80%;
+    @include border-radius(5px);
+  }
+}
+
+.column {
+  background-color: color("primary");
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.column-header {
+  color: color("highlight");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.column-not-started {
+  .task-item {
+    background-color: map-get($colors, "task-not-started");
+    // Otros estilos específicos para tareas no iniciadas
+  }
+}
+
+.column-in-progress {
+  .task-item {
+    background-color: map-get($colors, "task-in-progress");
+    // Otros estilos específicos para tareas en progreso
+  }
+}
+
+.column-completed {
+  .task-item {
+    background-color: map-get($colors, "task-completed");
+    // Otros estilos específicos para tareas completadas
+  }
+}
+
+button {
+  @include button-style("accent");
+  margin-bottom: $margin-normal;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex; // Usar flexbox para el contenedor principal
+  justify-content: space-between; // Espaciar las columnas uniformemente
+}
+
+// Estilos para la lista de tareas
+.task-list {
+  background-color: color("secondary");
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  border-radius: $margin-normal;
+}
+
+.task-item {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
+  position: relative;
+  min-height: 100px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+
+  .task-item__checkbox {
+    margin-right: $margin-small;
+  }
+  .task-item__text {
+    flex-grow: 1;
+  }
+  .task-item__delete {
+    position: absolute;
+    bottom: 10px; // Ajusta la distancia desde la parte inferior
+    right: 10px; // Ajusta la distancia desde la parte derecha
+    color: color("highlight");
+    cursor: pointer;
+  }
+}
+
+.task-content {
+  padding: 10px;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+// Estilos para el formulario de agregar tarea
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $margin-large;
+
+  .add-task-input {
+    flex-grow: 1;
+    padding: $margin-small;
+    @include border-radius(5px);
+    border: 1px solid color("secondary");
+    min-height: 100px; // Espacio adicional para texto
+  }
+
+  .add-task-btn {
+    @include button-style("highlight");
+    margin-top: $margin-small;
+  }
+}
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+@media (max-width: 600px) {
+  .task-card,
+  .column,
+  .modal-content {
+    padding: $margin-small;
+  }
+}

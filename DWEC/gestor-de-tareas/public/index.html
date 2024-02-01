@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestor</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Gestor de tareas</h1>
+    <main>
+      <!-- Modal de creacion-->
+      <div id="task-modal" class="modal">
+        <div class="modal-content">
+          <input type="text" id="task-input-modal" placeholder="Nueva Tarea" />
+          <button id="save-task">Guardar</button>
+        </div>
+      </div>
+      
+      <!-- Modal de edicion-->
+      <div id="edit-task-modal" class="modal">
+        <div class="modal-content">
+          <input type="text" id="edit-task-input" placeholder="Editar Tarea" />
+          <button id="save-edit-task">Guardar Cambios</button>
+        </div>
+      </div>
+
+      <!-- Columnas -->
+      <section  class="column column-not-started" id="not-started">
+        <div class="column-header">
+          <h2>No Iniciadas</h2>
+          <button class="delete-all-tasks-btn" data-column="not-started">Eliminar Todas</button>
+          <button class="add-task-btn" data-column="not-started">Añadir</button>
+        </div>
+        <div class="task-list"></div> 
+      </section>
+    
+      <section class="column column-in-progress" id="in-progress">
+        <div class="column-header">
+          <h2>Iniciadas</h2>
+          <button class="delete-all-tasks-btn" data-column="in-progress">Eliminar Todas</button>
+          <button class="add-task-btn" data-column="in-progress">Añadir</button>
+        </div>
+        <div class="task-list"></div> 
+      </section>
+    
+      <section class="column column-completed" id="completed">
+        <div class="column-header">
+          <h2>Finalizadas</h2>
+          <button class="delete-all-tasks-btn" data-column="completed">Eliminar Todas</button>
+        </div>
+        <div class="task-list"></div> 
+      </section>
+    </main>
+    
+
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
