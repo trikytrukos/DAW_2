@@ -179,7 +179,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleDragOver(event) {
     event.preventDefault(); // Necesario para permitir el drop
   }
-
   function handleDrop(event) {
     event.preventDefault();
     const taskId = event.dataTransfer.getData("text");

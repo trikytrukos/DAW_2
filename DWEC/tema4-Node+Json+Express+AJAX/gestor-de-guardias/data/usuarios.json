@@ -1,0 +1,32 @@
+{
+    "usuarios": [
+      {
+        "username": "admin",
+        "password": "123",
+        "role": "admin"
+      },
+      {
+        "profesorId": "Diana",
+        "username": "Diana",
+        "password": "123",
+        "role": "profesor",
+        "disponibilidad": ["L-1", "M-4", "X-2"]
+        
+      },
+      {
+        "profesorId": "Jorge",
+        "username": "Jorge",
+        "password": "123",
+        "role": "profesor",
+        "disponibilidad": ["L-5", "M-6", "X-5"]
+      },
+      {
+        "profesorId": "profesor3",
+        "username": "profesor3",
+        "password": "123",
+        "role": "profesor",
+        "disponibilidad": ["L-3", "M-3", "X-3"]
+      }
+    ]
+  }
+  
