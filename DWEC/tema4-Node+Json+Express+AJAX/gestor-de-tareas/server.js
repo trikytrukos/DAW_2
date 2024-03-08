@@ -18,6 +18,7 @@ app.get("/tasks", (req, res) => {
       res.status(500).send("Error al leer el archivo de tareas");
       return;
     }
+
     res.json(JSON.parse(data));
   });
 });

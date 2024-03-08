@@ -15,7 +15,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         if (data.role === "profesor") {
           localStorage.setItem("profesorId", data.profesorId);
         }
-
         if (data.role === "admin") {
           window.location.href = "/admin.html";
         } else if (data.role === "profesor") {
@@ -40,13 +39,13 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   xhr.send(data);
 });
 
-function manejarRespuestaLogin(respuesta) {
-  localStorage.setItem("rolUsuario", respuesta.role);
-  localStorage.setItem("profesorId", data.profesorId);
+// function manejarRespuestaLogin(respuesta) {
+//   localStorage.setItem("rolUsuario", respuesta.role);
+//   localStorage.setItem("profesorId", data.profesorId);
 
-  if (respuesta.rol === "admin") {
-    window.location.href = "/admin.html";
-  } else if (respuesta.rol === "profesor") {
-    window.location.href = "/profesor.html";
-  }
-}
+//   if (respuesta.rol === "admin") {
+//     window.location.href = "/admin.html";
+//   } else if (respuesta.rol === "profesor") {
+//     window.location.href = "/profesor.html";
+//   }
+// }

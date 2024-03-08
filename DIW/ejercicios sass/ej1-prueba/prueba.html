@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica de SCSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <h1 class="site-title">Mi Blog</h1>
+    <nav class="main-navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#home">Inicio</a></li>
+            <li class="nav-item"><a href="#about">Acerca de</a></li>
+            <li class="nav-item"><a href="#services">Servicios</a></li>
+            <li class="nav-item"><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <section id="home" class="home-section">
+        <h2>Bienvenido a mi Blog</h2>
+        <p>Este es un párrafo de introducción.</p>
+    </section>
+    <section id="about" class="about-section">
+        <h2>Acerca de mí</h2>
+        <p>Un poco sobre mi historia personal.</p>
+    </section>
+    <section id="services" class="services-section">
+        <h2>Servicios que ofrezco</h2>
+        <p>Detalles de los servicios que proporciono.</p>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2024 Mi Blog. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

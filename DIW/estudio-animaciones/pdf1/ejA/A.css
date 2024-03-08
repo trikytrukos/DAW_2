@@ -1,0 +1,10 @@
+.prueba {
+  background-color: #f00;
+  width: 100px;
+  height: 100px;
+    transition: transform 1s;
+}
+
+.prueba:hover{
+  transform: translateZ(500px);
+}

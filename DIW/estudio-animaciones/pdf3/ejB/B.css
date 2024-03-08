@@ -1,0 +1,23 @@
+.prueba {
+  width: 300px;
+  height: 100px;
+  background-color: #f00;
+  border: solid 1px black;
+  animation-name: animacion;
+  animation-duration: 4s;
+}
+
+@keyframes animacion {
+  0% {
+    background-color: #f00;
+  }
+  25% {
+    background-color: rgb(229, 240, 30);
+  }
+  50% {
+    background-color: rgb(77, 64, 228);
+  }
+  100% {
+    background-color: rgb(30, 240, 86);
+  }
+}

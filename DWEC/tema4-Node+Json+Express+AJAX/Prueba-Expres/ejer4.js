@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 // Ruta para manejar la solicitud POST del formulario
-app.post('/procesar', (req, res) => {
+app.post('/tasks', (req, res) => {
     const { nombre, correo } = req.body;
     res.send(`¡Hola, ${nombre}! Correo: ${correo}`);
 });

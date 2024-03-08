@@ -1,0 +1,32 @@
+.prueba {
+    width: 300px;
+    height: 100px;
+    background-color: #f00;
+    border: solid 1px black;
+    animation-name: animacion;
+    animation-duration: 4s;
+    animation-delay: 2s;
+  }
+  
+  @keyframes animacion {
+    0% {
+      background-color: #f00;
+      transform: translateX(-300px) ;
+    }
+    25% {
+      background-color: rgb(229, 240, 30);
+      transform: translateX(300px) ;
+
+    }
+    50% {
+      background-color: rgb(77, 64, 228);
+      transform: translateY(-300px) ;
+
+    }
+    100% {
+      background-color: rgb(30, 240, 86);
+      transform: translateY(300px) ;
+
+    }
+  }
+  

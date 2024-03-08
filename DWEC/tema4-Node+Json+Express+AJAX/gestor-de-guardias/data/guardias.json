@@ -1,3 +1,9 @@
 {
-  "guardias": []
+  "guardias": [
+    {
+      "profesorId": "Jorge",
+      "celdaId": "X-2",
+      "descripcion": "adsfc"
+    }
+  ]
 }

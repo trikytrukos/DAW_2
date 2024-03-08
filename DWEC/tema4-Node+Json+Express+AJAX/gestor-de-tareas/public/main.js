@@ -23,10 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener para enviar la tarea al presionar "Enter"
   var modal = document.getElementById("task-modal");
-
-  if (event.key === "Enter") {
-    sendTask();
-  }
+  modal.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      sendTask();
+    }
+  });
 
   document
     .getElementById("save-task")

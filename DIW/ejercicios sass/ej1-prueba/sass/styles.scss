@@ -1,0 +1,124 @@
+// Variables
+$font-stack: 'Helvetica Neue', sans-serif;
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-color: #333;
+$base-spacing-unit: 10px;
+$animation-duration: .3s;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin theme-colors($color) {
+  background-color: $color;
+  color: white;
+  @if (lightness($color) > 70) {
+    color: darken($color, 50%);
+  }
+}
+
+// Bucles
+@for $i from 1 through 5 {
+  .p-#{$i} {
+    padding: $base-spacing-unit * $i;
+  }
+}
+
+// Animación
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// Reset básico para algunos elementos
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  color: $font-color;
+}
+
+// Estilos del encabezado
+.site-header {
+  @include flex-center;
+  @include theme-colors($primary-color);
+  animation: slideIn $animation-duration ease-out;
+}
+
+.site-title {
+  font-size: 2rem;
+  margin: $base-spacing-unit;
+}
+
+.main-navigation {
+  .nav-list {
+    list-style: none;
+    display: flex;
+    
+    .nav-item {
+      margin-right: $base-spacing-unit;
+      
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: darken(white, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Estilos de las secciones
+.content {
+  @for $i from 1 through 4 {
+    section:nth-child(#{$i}) {
+      padding: $base-spacing-unit * $i;
+    }
+  }
+}
+
+// Estilos del formulario de contacto
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: $base-spacing-unit;
+  padding: $base-spacing-unit * 2;
+  
+  label {
+    display: block;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: $base-spacing-unit / 2;
+    margin-bottom: $base-spacing-unit;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    @include theme-colors($secondary-color);
+    padding: $base-spacing-unit;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+// Estilos del pie de página
+.site-footer {
+  padding: $base-spacing-unit;
+  text-align: center;
+  background-color: darken($primary-color, 10%);
+  color: white;
+}
