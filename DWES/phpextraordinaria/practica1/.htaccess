@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^insertar$ phpextraordinaria/practica1/server.php [L]
+RewriteRule ^eliminar$ phpextraordinaria/practica1/server.php [L]
+RewriteRule ^editView$ phpextraordinaria/practica1/update.php [L]
+RewriteRule ^update$ phpextraordinaria/practica1/server.php [L]

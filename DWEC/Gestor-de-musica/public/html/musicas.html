@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+          margin: 0;
+      }
+
+      header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+      }
+
+      main {
+          padding: 10px;
+      }
+
+      #songs-container {
+          display: flex;
+          justify-content: space-around;
+      }
+  </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gestor de Canciones</h1>
+      <button>log out</button>
+    </header>
+    <main>
+        <form action="">
+          <label for="title-input">
+            <input type="text" id="title-input" name="title-input" />
+          </label>
+          <select name="category-selector" id="category-selector">
+            <option value="favourites">canciones favoritas</option>
+            <option value="pending">canciones pendientes</option>
+            <option value="not-recomended">canciones no recomendadas</option>
+          </select>
+          <button id="add-song">añadir</button>
+        </form>
+        <div id="songs-container">
+          <div>
+            <div>
+                <h2>canciones favoritas</h2>
+            </div>
+            <div id="favourites-songs">
+                <!--Aqui se van a generar las canciones favoritas-->
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>canciones pendientes</h2>
+            </div>
+            <div id="pending-songs">
+              <!--Aqui se van a generar las canciones pendientes-->
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>canciones no recomendada</h2>
+            </div>
+            <div id="not-recomended-songs">
+              <!--Aqui se van a generar las canciones no recomendadas-->
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <script src="../js/client.js"></script>
+  </body>
+</html>

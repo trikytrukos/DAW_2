@@ -3,13 +3,17 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
   const errorMessage = document.getElementById("error-message");
+
   var xhr = new XMLHttpRequest();
+
+
   xhr.open("POST", "/login", true);
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
   xhr.onload = function () {
     if (xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
+      
       if (data.success) {
         localStorage.setItem("rolUsuario", data.role);
         if (data.role === "profesor") {

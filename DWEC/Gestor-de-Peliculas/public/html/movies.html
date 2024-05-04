@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+          margin: 0;
+      }
+
+      header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+      }
+
+      main {
+          padding: 10px;
+      }
+
+      #movies-container {
+          display: flex;
+          justify-content: space-around;
+      }
+  </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gestor de peliculas</h1>
+      <button>log out</button>
+    </header>
+    <main>
+        <form action="">
+          <label for="title-input">
+            <input type="text" id="title-input" name="title-input" />
+          </label>
+          <select name="category-selector" id="category-selector">
+            <option value="favourites">peliculas favoritas</option>
+            <option value="pending">peliculas pendientes</option>
+            <option value="not-recomended">peliculas no recomendadas</option>
+          </select>
+          <button id="add-movie">añadir</button>
+        </form>
+        <div id="movies-container">
+          <div>
+            <div>
+                <h2>peliculas favoritas</h2>
+            </div>
+            <div id="favourites-movies">
+                <!--Aqui se van a generar las peliculas favoritas-->
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>peliculas pendientes</h2>
+            </div>
+            <div id="pending-movies">
+              <!--Aqui se van a generar las peliculas pendientes-->
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>peliculas no recomendada</h2>
+            </div>
+            <div id="not-recomended-movies">
+              <!--Aqui se van a generar las peliculas no recomendadas-->
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <script src="../js/client.js"></script>
+  </body>
+</html>
