@@ -1,0 +1,26 @@
+<?php
+
+    class GestorRelacional extends GestorDatos {
+
+        protected $sistemas_operativos;
+        protected $version;
+        protected $transacction_support;
+
+        public function __construct($name, $description, $sistemas_operativos, $version, $transacction_support) {
+            parent::__construct($name, $description);
+            $this->sistemas_operativos = $sistemas_operativos;
+            $this->version = $version;
+            $this->transacction_support = $transacction_support;
+        }
+
+
+        public function obtenerDetalle()
+        {
+            return "name: $this->name, 
+            Descripcion: $this->description,
+            Sistemas operativos: $this->sistemas_operativos, Version: $this->version, Soporte de transacciones: $this->transacction_support";
+        }
+
+    }
+
+?>

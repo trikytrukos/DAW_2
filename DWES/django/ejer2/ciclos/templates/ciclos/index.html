@@ -1,0 +1,10 @@
+{% if familias%}
+    <h1>Lista de familias</h1>
+    <ul>
+        {% for familia in familias %}
+            <li><a href="{% url 'ciclos:detail' pk=familia.id %}">{{ familia.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay familias</p>
+{% endif %}

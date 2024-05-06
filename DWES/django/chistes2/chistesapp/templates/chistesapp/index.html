@@ -1,0 +1,9 @@
+{% if chistes %}
+    <ul>
+        {% for chiste in chistes %}
+            <li>{{ chiste }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay chistes</p>
+{% endif %}
