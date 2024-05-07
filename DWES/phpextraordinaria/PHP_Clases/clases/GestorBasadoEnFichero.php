@@ -2,8 +2,8 @@
 
     class GestorBasadoEnFichero extends GestorDatos{
 
-        protected $formato_archivo;
-        protected $modo_acceso;
+        private $formato_archivo;
+        private $modo_acceso;
 
         public function __construct($name, $description, $formato_archivo, $modo_acceso){
             parent::__construct($name, $description);
@@ -12,7 +12,11 @@
         }
 
         public function obtenerDetalle(){
-            return "Gestor de datos basado en fichero: ".$this->name." - ".$this->description." - ".$this->formato_archivo." - ".$this->modo_acceso;
+            yield $this->name;
+            yield $this->description;
+
+            yield $this->formato_archivo;
+            yield $this->modo_acceso;
         }
         
     }
