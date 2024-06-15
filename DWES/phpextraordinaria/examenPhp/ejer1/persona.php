@@ -37,7 +37,7 @@ class Persona
     {
         $this->apellido1 = $apellido1;
     }
-    
+
     function getApellido2(): string
     {
         return $this->apellido2;
