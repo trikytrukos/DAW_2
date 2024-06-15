@@ -4,8 +4,6 @@
 
     $page = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 
-    $select = $db -> prepare('SELECT * FROM matches LIMIT :offset, :limite');
-
     if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['button1'])){
         $order = $_POST['countries'];
         $result = $_POST['results'];

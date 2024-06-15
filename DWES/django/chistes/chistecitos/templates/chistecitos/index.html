@@ -1,0 +1,14 @@
+{% if chistes %}
+    <h1>Chistes</h1>
+    {% for chiste in chistes %}
+    {% if chiste.adulto %}
+        <h2>Niño no leas</h2>
+    {% endif %}
+        <p>{{ chiste.titulo }}</p>
+        <p>{{ chiste.texto }}</p>
+        <p>{{ chiste.fecha }}</p>
+    {% endfor %}
+{% else %}
+    <h1>No hay chistes</h1>
+{% endif %}
+
